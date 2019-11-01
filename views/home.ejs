@@ -7,7 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>age <%= data.name %></h2>
-    <h2>name <%= data.artisit %></h2>
+    <% for(var i = 0; data.length > i;i++){ %>
+        <h2>song <%= data[i].name %></h2>
+        <h2>artist <%= data[i].artist %></h2>
+        <audio controls>
+            <source src="<%= data[i].url %>" type="audio/mp3">
+                audio not support
+          </audio>
+    <% } %>
+    
+    
 </body>
 </html>
